@@ -1,0 +1,148 @@
+{
+  "functions": [
+    {
+      "args": [
+        {
+          "name": "arg1",
+          "type": "int"
+        },
+        {
+          "name": "arg2",
+          "type": "int"
+        }
+      ],
+      "instrs": [
+        {
+          "dest": "a",
+          "op": "const",
+          "type": "int",
+          "value": 4
+        },
+        {
+          "dest": "b",
+          "op": "const",
+          "type": "int",
+          "value": 3
+        },
+        {
+          "args": [
+            "a",
+            "b"
+          ],
+          "dest": "constant_fold2",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "a",
+            "b"
+          ],
+          "dest": "constant_fold3",
+          "op": "le",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "b",
+            "a"
+          ],
+          "dest": "constant_fold4",
+          "op": "lt",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "b",
+            "a"
+          ],
+          "dest": "constant_fold5",
+          "op": "gt",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "b",
+            "a"
+          ],
+          "dest": "constant_fold6",
+          "op": "ge",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "arg1",
+            "arg1"
+          ],
+          "dest": "should_fold1",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "arg1",
+            "arg1"
+          ],
+          "dest": "should_fold2",
+          "op": "le",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "arg1",
+            "arg1"
+          ],
+          "dest": "should_fold3",
+          "op": "ge",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "arg1",
+            "arg2"
+          ],
+          "dest": "no_fold1",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "arg1",
+            "arg2"
+          ],
+          "dest": "no_fold2",
+          "op": "le",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "arg1",
+            "arg2"
+          ],
+          "dest": "no_fold3",
+          "op": "ge",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "arg1",
+            "arg1"
+          ],
+          "dest": "no_fold4",
+          "op": "lt",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "arg2",
+            "arg2"
+          ],
+          "dest": "no_fold5",
+          "op": "gt",
+          "type": "bool"
+        }
+      ],
+      "name": "main"
+    }
+  ]
+}

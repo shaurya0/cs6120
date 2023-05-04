@@ -1,0 +1,181 @@
+{
+  "functions": [
+    {
+      "args": [
+        {
+          "name": "arg1",
+          "type": "bool"
+        },
+        {
+          "name": "arg2",
+          "type": "bool"
+        }
+      ],
+      "instrs": [
+        {
+          "dest": "t",
+          "op": "const",
+          "type": "bool",
+          "value": true
+        },
+        {
+          "dest": "f",
+          "op": "const",
+          "type": "bool",
+          "value": false
+        },
+        {
+          "args": [
+            "f",
+            "t"
+          ],
+          "dest": "constant_fold1",
+          "op": "and",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "t",
+            "f"
+          ],
+          "dest": "constant_fold2",
+          "op": "and",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "t",
+            "f"
+          ],
+          "dest": "constant_fold3",
+          "op": "or",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "f",
+            "t"
+          ],
+          "dest": "constant_fold4",
+          "op": "or",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "t"
+          ],
+          "dest": "constant_fold5",
+          "op": "not",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "f"
+          ],
+          "dest": "constant_fold6",
+          "op": "not",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "f",
+            "arg1"
+          ],
+          "dest": "should_fold1",
+          "op": "and",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "arg1",
+            "f"
+          ],
+          "dest": "should_fold2",
+          "op": "and",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "t",
+            "arg1"
+          ],
+          "dest": "should_fold3",
+          "op": "or",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "arg1",
+            "t"
+          ],
+          "dest": "should_fold4",
+          "op": "or",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "t",
+            "arg1"
+          ],
+          "dest": "no_fold1",
+          "op": "and",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "arg1",
+            "t"
+          ],
+          "dest": "no_fold2",
+          "op": "and",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "f",
+            "arg1"
+          ],
+          "dest": "no_fold3",
+          "op": "or",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "arg1",
+            "f"
+          ],
+          "dest": "no_fold4",
+          "op": "or",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "arg1",
+            "arg2"
+          ],
+          "dest": "no_fold5",
+          "op": "and",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "arg1",
+            "arg2"
+          ],
+          "dest": "no_fold6",
+          "op": "or",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "arg1"
+          ],
+          "dest": "no_fold7",
+          "op": "not",
+          "type": "bool"
+        }
+      ],
+      "name": "main"
+    }
+  ]
+}
