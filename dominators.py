@@ -125,13 +125,13 @@ def get_dominance_frontier(dominators: Dict[str, OrderedSet[str]], basic_blocks:
     for node, block in basic_blocks.items():
         predecessors = basic_blocks[node].predecessors
 
-        if len(predecessors) > 1:
-            imm_dom = dominators[node][-1]
+        if len(predecessors) >= 2:
+            imm_dom = dominators[node][-2]
             for pred in predecessors:
                 runner = pred
                 while runner != imm_dom:
                     dominance_frontier[runner].append(node)
-                    runner = dominators[runner][-1]
+                    runner = dominators[runner][-2]
 
     return dominance_frontier
 
